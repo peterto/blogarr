@@ -1,0 +1,18 @@
+common: &common
+  adapter: postgresql
+  username: peterto
+  password:
+  host: localhost
+  port: 5432
+
+development: 
+  <<: *common
+  database: blogarr_development
+
+test:
+  <<: *common
+  database: blogarr_test
+
+production:
+  <<: *common
+  database: blogarr_production
