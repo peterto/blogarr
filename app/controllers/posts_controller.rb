@@ -25,6 +25,9 @@ class PostsController < ApplicationController
   end
   
   def update
+    if @post.update_attributes(params[:post])
+      redirect_to posts_path, notice: 'Post has been updated'
+    end
   end
   
   def destroy

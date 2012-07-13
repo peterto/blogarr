@@ -5,14 +5,14 @@ describe "PostPages" do
     @post = FactoryGirl.create(:post)
   }
   
-  describe "GET /post_pages" do
+  describe "GET /post" do
     it "should have content 'Posts#index'" do
       visit '/posts'
       page.should have_content('Posts#index')
     end
   end
   
-  describe "GET /post/new" do
+  describe "new" do
     # let(:post) = { FactoryGirl.create(:post) }
     
     it "should have content 'Posts#new'" do
@@ -25,11 +25,25 @@ describe "PostPages" do
       fill_in 'post_title', :with => @post.title
       fill_in 'post_content', :with => @post.content
       
-      click_button 'Create Post'
+      expect {
+        click_button 'Create Post'
+      }.to change { Post.count }.by(1)
       
+      # save_page
       # page.current_path should == post_path(@post)
 
       
+    end
+  end
+  
+  describe "edit" do
+    it "should have edit post", js: true do
+      
+      visit post_path(@post)
+      # page.current_path should == post_path(@post)
+      click_link "Edit"
+      
+      page.current_path should == edit_post_path(@post)
     end
   end
 end
