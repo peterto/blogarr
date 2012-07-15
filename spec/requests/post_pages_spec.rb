@@ -37,11 +37,12 @@ describe "PostPages" do
   end
   
   describe "edit" do
-    it "should have edit post", js: true do
+    it "should have edit post" do
       
       visit post_path(@post)
+      page.should have_content('Edit')
       # page.current_path should == post_path(@post)
-      click_link "Edit"
+      click_link 'Edit'
       
       page.current_path should == edit_post_path(@post)
     end
