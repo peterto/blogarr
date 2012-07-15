@@ -7,10 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <h1>Blogarr</h1>
-  <h1><%= link_to "Home", posts_path %></h1>
+  <div class="wrapper">
 
-<%= yield %>
-
+    <div class="header">
+      <%= render 'shared/header' %>
+    </div>
+    
+    <div class="content">
+      <%= yield %>
+    </div>
+    
+    <div class="sidebar">
+      <%= render 'shared/sidebar' %>
+    </div>
+    
+  </div>
 </body>
 </html>

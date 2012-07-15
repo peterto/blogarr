@@ -1,8 +1,8 @@
 <h1>Posts#show</h1>
 
-<h2>Title: <%= @post.title %> </h2>
-<h2>Content:</h2> <%= @post.content %>
-<h2>Published At: <%= @post.created_at %> </h2>
+<h2><%= link_to @post.title, @post.title %> </h2>
+<h4><%= @post.created_at %> </h4>
+<%= @post.content %>
 
 <h4>
   <%= link_to "Edit", edit_post_path(@post) %>  
