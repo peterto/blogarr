@@ -1,7 +1,5 @@
-<h1>Posts#show</h1>
-
 <h2><%= link_to @post.title, @post.title %> </h2>
-<h4><%= @post.created_at %> </h4>
+<h4><%= @post.created_at.strftime("%b %e at %l:%M%p") %> </h4>
 <%= @post.content %>
 
 <h4>
