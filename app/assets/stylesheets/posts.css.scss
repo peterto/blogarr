@@ -8,23 +8,27 @@ body {
 }
 
 .wrapper {
-  background-color: purple;
+//  background-color: purple;
 }
 
 .header {
-  background-color: red;
+//  background-color: red;
   width: 960px;
 }
 
 .content {
   width: 600px;
-  background-color: green;
+//  background-color: green;
   float: left;
 }
 
 .sidebar {
   width: 300px;
-  background-color: yellow;
+//  background-color: yellow;
   float: right;
 }
 
+.footer {
+  clear:both;
+// background-color: blue;
+}
