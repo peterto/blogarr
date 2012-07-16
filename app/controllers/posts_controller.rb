@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :authorize, only: [:edit, :update, :new]
+  
   def index
     @posts = Post.recent
   end
