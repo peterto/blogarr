@@ -51,6 +51,11 @@ a:visited {
 a:visited:hover {
 	color: green;
 }
+p {
+	margin-bottom: 0;
+}
+
+
 /* Header
 =========================================== */
 
@@ -65,6 +70,9 @@ a:visited:hover {
 }
 .header, .content, .sidebar {
 	margin-bottom: 20px;
+}
+.content {
+	padding-bottom: 20px;
 }
 .header h2 {
 	float: left;
