@@ -1,9 +1,15 @@
 common: &common
-  adapter: postgresql
   username: peterto
   password:
+  adapter: postgresql
   host: localhost
   port: 5432
+
+aaron:
+  <<: *common
+  username: postgres
+  password: batman
+  database: blogarr_development
 
 development: 
   <<: *common

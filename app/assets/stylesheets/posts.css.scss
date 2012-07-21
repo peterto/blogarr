@@ -32,3 +32,44 @@ body {
   clear:both;
 // background-color: blue;
 }
+
+/* General Styles
+=========================================== */
+a, p, h1, h2, h3, h4, h5, h6, div, span {
+	font-family: Helvetica;
+} 
+a {
+	text-decoration: none;
+	outline: none;
+}
+a:hover {
+	color: green;
+}
+a:visited {
+	color: blue;
+}
+a:visited:hover {
+	color: green;
+}
+/* Header
+=========================================== */
+
+.header, .content, .footer, .sidebar {
+	border: 2px dotted gray;
+	border-radius: 6px;
+	overflow: hidden;
+	padding: 0 10px;
+}
+.header, .footer {
+	width: 940px;
+}
+.header, .content, .sidebar {
+	margin-bottom: 20px;
+}
+.header h2 {
+	float: left;
+}
+.login-actions {
+	float: right;
+	line-height: 66px;;
+}
