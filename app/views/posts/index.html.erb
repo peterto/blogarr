@@ -5,7 +5,7 @@
 <% @posts.each do |post| %>
 	<div class="post">  
 		<h2><%= link_to post.title, post %></h2> 
-		<h3><%= post.created_at.strftime("%b %e at %l:%M%p") %></h3>
+		<h3><%= post.created_at.strftime("%b %e at %l:%M%p") %> by <%= User.find(post.user_id).first_name %></h3>
 		<p><%= truncate(post.content, :length => 500) %></p>
 		<% if current_user %>
 		  <div class="admin-controls">

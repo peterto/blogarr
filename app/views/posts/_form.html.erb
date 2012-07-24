@@ -5,5 +5,7 @@
   
   <h1><%= f.label :content %></h1>
   <%= f.text_area :content %>
+  
+  <%= hidden_field_tag 'user_id', current_user.id %>
   <%= f.submit "Create Post" %>
 <% end %>
