@@ -4,5 +4,7 @@ class Post < ActiveRecord::Base
   validates :content, presence: true
   
   scope :recent, order("created_at DESC").limit(5)
+  
+  belongs_to :user
 
 end

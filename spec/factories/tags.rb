@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :tag do
     post_id 1
-    tag_name "MyString"
+    tag_name Faker::Lorem.word
   end
 end

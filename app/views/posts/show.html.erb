@@ -1,6 +1,6 @@
 <h2><%= link_to @post.title, post_path(@post) %> </h2>
 <h3><%= @post.created_at.strftime("%b %e at %l:%M%p") %> by <%= User.find(@post.user_id).first_name %> </h3>
-<%= @post.content %>
+<%= markdown(@post.content) %>
 
 <% if current_user %>
 	<div class="admin-controls">
