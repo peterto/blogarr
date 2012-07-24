@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :authorize, only: [:edit, :update, :new, :destroy]
+  before_filter :authorize, only: [:create, :edit, :update, :new, :destroy]
   
   def index
     @posts = Post.recent
